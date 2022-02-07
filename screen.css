@@ -7,3 +7,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* Begin site styles below */
+
+html {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
