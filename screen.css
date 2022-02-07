@@ -13,3 +13,29 @@ html {
   font-size: 18px;
   line-height: 22px;
 }
+
+/* <nav aria-label="Main"> */
+
+nav a {
+  color: green;
+  display: block;
+  text-decoration: none;
+}
+
+nav[aria-label="Main"] a {
+  color: purple;
+}
+
+a[href^="http"]{
+  color: green;
+}
+
+@media screen and (min-width: 380px) {
+  nav > ul {
+    display: flex;
+  }
+  nav > ul > li {
+    flex: 1 0 auto;
+    text-align: center;
+  }
+}
