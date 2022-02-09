@@ -22,14 +22,18 @@
 
 
   <main id="content">
-    <h2>Solid Semantics</h2>
+    <form name="github" id="github-form"
+      action="#null" method="get" aria-labelled-by="github-label">
+      <h2 id="github-label">Retrieve GitHub User Account Information</h2>
 
-    <p>
-      Go and search something on
-      <a href="https://www.google.com/">Google</a>.
-      Or <a href="/contact/">contact us</a>.
-    </p>
+      <label for="username">
+        Enter a GitHub username to learn all about that user:
+      </label>
+      <input type="text" name="username" id="username" />
 
+      <button type="submit">Retrieve User Info</button>
+
+    </form>
   </main>
 
   <script src="site.js"></script>
