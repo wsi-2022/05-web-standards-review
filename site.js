@@ -15,6 +15,8 @@ ghUsername.addEventListener('input', function(event) {
 });
 
 ghForm.addEventListener('submit', function(event) {
+  var formData = new FormData(this);
   event.preventDefault();
   console.log('Heard form submit event!');
+  console.log('The username, via FormData, is:', formData.get('username'));
 });
