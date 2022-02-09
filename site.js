@@ -16,7 +16,18 @@ ghUsername.addEventListener('input', function(event) {
 
 ghForm.addEventListener('submit', function(event) {
   var formData = new FormData(this);
+  var username = formData.get('username');
+  var apiURL = 'https://api.github.com/users/' + username;
   event.preventDefault();
   console.log('Heard form submit event!');
-  console.log('The username, via FormData, is:', formData.get('username'));
+  console.log('The username, via FormData, is:', username);
+
+  fetch(apiURL)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data.login);
+    });
+
 });
